@@ -47,7 +47,7 @@
             android:layout_below="@id/namateam1"
             android:layout_centerHorizontal="true"
             android:text="0"
-            android:textSize="50pt"
+            android:textSize="45pt"
             android:textStyle="bold" />
 
         <Button
@@ -112,11 +112,11 @@
             android:id="@+id/score_team2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="0"
             android:layout_below="@id/namateam2"
-            android:textSize="50pt"
-            android:textStyle="bold"
-            android:layout_centerHorizontal="true"/>
+            android:layout_centerHorizontal="true"
+            android:text="0"
+            android:textSize="45pt"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/team2_1"
@@ -153,12 +153,21 @@
     </RelativeLayout>
 
     <Button
+        android:id="@+id/reset"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="reset score"
         android:layout_below="@id/team1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30pt"
+        android:layout_marginTop="9pt"
         android:backgroundTint="@color/ijo_mudabanget"
-        android:onClick="resetScore"/>
+        android:onClick="resetScore"
+        android:text="reset score" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hasil pertandingan"
+        android:layout_below="@id/reset"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/ijo_mudabanget"/>
 </RelativeLayout>

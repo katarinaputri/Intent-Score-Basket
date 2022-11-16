@@ -2,15 +2,20 @@ package com.example.intent_score_basket;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MatchActivity extends AppCompatActivity {
     TextView tvnama1, tvnama2;
     TextView tvscore1, tvscore2;
 
     int scoreTeam1, scoreTeam2 = 0;
+
+    ImageView ivlogoo1, ivlogoo2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,11 +24,21 @@ public class MatchActivity extends AppCompatActivity {
         tvnama1 = findViewById(R.id.namateam1);
         tvnama2 = findViewById(R.id.namateam2);
 
+        ivlogoo1 = findViewById(R.id.logo1);
+        ivlogoo2 = findViewById(R.id.logo2);
+
         String nama_team1 = getIntent().getExtras().getString("team1");
         String nama_team2 = getIntent().getExtras().getString("team2");
 
         tvnama1.setText(nama_team1);
         tvnama2.setText(nama_team2);
+
+        Uri team1logo = Uri.parse(getIntent().getExtras().getString("Logo1"));
+        Uri team2logo = Uri.parse(getIntent().getExtras().getString("Logo2"));
+
+        ivlogoo1.setImageURI(team1logo);
+        ivlogoo2.setImageURI(team2logo);
+
     }
 
     public void displayTeam1 (int score){
